@@ -1,11 +1,14 @@
 body {
 }
 nav {
-  position: absolute;
+  width: 100%;
+  position: fixed;
   top: 0;
   z-index: 999;
   display: flex;
   justify-content: center;
+  background-color: white;
+  border-bottom: 1px solid grey;
 }
 .container {
   margin-top: 80px;
@@ -69,6 +72,52 @@ body .A1 {
   margin-bottom: 30px;
   text-align: justify;
   line-height: 50px;
+}
+
+.A2 figure {
+  padding-bottom: 30px;
+}
+
+.A2 figure img {
+  margin-top: 30px;
+}
+
+.A2 figure figcaption {
+  font-size: 17.5px;
+  color: rgb(102, 102, 102);
+  line-height: 20px;
+}
+
+.A2 figure figcaption cite {
+  font-size: 16px;
+  font-style: normal;
+  color: rgb(136, 136, 136);
+}
+
+.A2-b figure img {
+  margin-right: 10px;
+  width: 50px;
+  display: inline-block;
+}
+
+.A2-b figure figcaption {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.A2-b figure figcaption a {
+  color: black;
+  text-decoration-color: rgb(212, 212, 212);
+}
+
+.A2-b figure figcaption a:hover {
+  text-decoration: none;
+}
+
+.A2-b figure {
+  display: flex;
+  align-items: center;
 }
 
 .A3 figure {
