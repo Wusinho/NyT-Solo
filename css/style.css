@@ -1,12 +1,12 @@
-body {
-}
-nav {
+.nav-top {
   width: 100%;
+  padding: 10px 20px;
   position: fixed;
   top: 0;
   z-index: 999;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   background-color: white;
   border-bottom: 1px solid grey;
 }
@@ -23,12 +23,7 @@ nav {
   gap: 10px;
 }
 
-body .A1 {
-  display: grid;
-  grid-template-columns: 300px 720px 200px;
-}
-
-.A1 .logo {
+.nav-top .logo {
   width: 200px;
 }
 
@@ -91,7 +86,7 @@ body .A1 {
 .A2 figure figcaption cite {
   font-size: 16px;
   font-style: normal;
-  color: rgb(136, 136, 136);
+  color: #888;
 }
 
 .A2-b figure img {
@@ -118,13 +113,129 @@ body .A1 {
 .A2-b figure {
   display: flex;
   align-items: center;
+  margin-bottom: 25px;
 }
 
-.A3 figure {
+.A2-b div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.A2-b div span i {
+  margin: 0 5px;
+  border: 2px solid #eeeeee;
+  background-color: #eeeeee;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.A2-b div span i:hover {
+  background-color: transparent;
+}
+
+.A2-b div span:first-child {
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.A2-b div span i:first-child {
+  margin-left: 0;
+  padding: 5px 7px;
+}
+.A2-b div span i:last-child {
+  margin-right: 0;
+}
+
+.A2-b div span:last-child {
+  font-size: 16px;
+  text-align: right;
+}
+
+.A2-b div span i:nth-child(n + 5) {
+  font-size: 28px;
+  background-color: transparent;
+  border: transparent;
+}
+
+.A2-b div span i:nth-child(n + 5):hover {
+  color: #eee;
+}
+
+.A2-b div span span {
+  position: absolute;
+  right: 14.5px;
+  margin-top: 1.5px;
+}
+.A2-b div span .nlikes {
+  font-size: 12px;
+}
+
+.A2-b .A3 figure {
   margin: 20px 0;
   display: flex;
   font-size: 15px;
   align-items: center;
+}
+.A2-b article div {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.A2-b article div a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #567b95;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.A2-b article p a {
+  color: #567b95;
+}
+
+.A2-b article p {
+  margin-top: 20px;
+}
+
+.A2-b article blockquote {
+  margin: 50px 0 25px 0;
+  border-top: 2px solid #eee;
+  display: inline-flex;
+  /* justify-content: space-around; */
+  padding-top: 15px;
+}
+
+.A2-b article blockquote span {
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.A2-b article blockquote cite {
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  color: #333;
+}
+
+.A2-b article blockquote button {
+  width: 125px;
+  height: 40px;
+  padding-top: 4px;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 2px;
+  border: 1.5px solid black;
+  transition: 500ms;
+}
+
+.A2-b article blockquote button:hover {
+  color: white;
+  background-color: black;
+  transition: 500ms;
 }
 
 .A3 figure figcaption {
