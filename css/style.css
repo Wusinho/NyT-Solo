@@ -1,0 +1,93 @@
+body {
+}
+nav {
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr 620px 1fr;
+  grid-template-rows: auto auto auto 400px;
+  grid-template-areas:
+    ". A2 ."
+    ". A2-b A3"
+    ". A2-c ."
+    "A4 A4 A4";
+  gap: 10px;
+}
+
+body .A1 {
+  display: grid;
+  grid-template-columns: 300px 720px 200px;
+}
+
+.A1 .logo {
+  width: 200px;
+}
+
+.A2 {
+  grid-area: A2;
+}
+
+.A2-b {
+  grid-area: A2-b;
+}
+
+.A2-c {
+  grid-area: A2-c;
+}
+
+.A3 {
+  grid-area: A3;
+  margin-left: 40px;
+  padding-right: 60px;
+  max-width: 250px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.A4 {
+  grid-area: A4;
+}
+
+.A1,
+.items {
+  font-family: nyt-imperial georgia "times new roman" times serif;
+  font-size: 23px;
+  line-height: 30px;
+}
+
+.A2 h1 {
+  font-size: 32px;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 100;
+  margin-bottom: 30px;
+  text-align: justify;
+  line-height: 50px;
+}
+
+.A3 figure {
+  margin: 20px 0;
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+}
+
+.A3 figure figcaption {
+  padding-left: 10px;
+  line-height: 15px;
+}
+
+.A3 figure img {
+  width: 70px;
+  height: 70px;
+}
+
+.A3 h3 {
+  border-bottom: 1px solid grey;
+}
