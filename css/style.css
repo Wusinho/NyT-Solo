@@ -8,18 +8,19 @@
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  border-bottom: 1px solid grey;
+  border-bottom: 2px solid #eee;
 }
 .container {
   margin-top: 80px;
   display: grid;
   grid-template-columns: 1fr 620px 1fr;
-  grid-template-rows: auto auto auto 400px;
+  grid-template-rows: repeat(5, auto);
   grid-template-areas:
     ". A2 ."
     ". A2-b A3"
     ". A2-c ."
-    "A4 A4 A4";
+    ". A4 ."
+    "A5 A5 A5";
   gap: 10px;
 }
 
@@ -52,6 +53,10 @@
   grid-area: A4;
 }
 
+.A5 {
+  grid-area: A5;
+}
+
 .A1,
 .items {
   font-family: nyt-imperial georgia "times new roman" times serif;
@@ -77,13 +82,15 @@
   margin-top: 30px;
 }
 
-.A2 figure figcaption {
+.A2 figure figcaption,
+.A2-c figure figcaption {
   font-size: 17.5px;
   color: rgb(102, 102, 102);
   line-height: 20px;
 }
 
-.A2 figure figcaption cite {
+.A2 figure figcaption cite,
+.A2-c figure figcaption cite {
   font-size: 16px;
   font-style: normal;
   color: #888;
@@ -116,13 +123,15 @@
   margin-bottom: 25px;
 }
 
-.A2-b div {
+.A2-b div,
+.A4 form {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
 }
-.A2-b div span i {
+.A2-b div span i,
+.A4 form span i {
   margin: 0 5px;
   border: 2px solid #eeeeee;
   background-color: #eeeeee;
@@ -131,7 +140,8 @@
   cursor: pointer;
 }
 
-.A2-b div span i:hover {
+.A2-b div span i:hover,
+.A4 form span i:hover {
   background-color: transparent;
 }
 
@@ -140,9 +150,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.A2-b div span i:first-child {
+.A2-b div span i:first-child,
+.A4 form span i:first-child {
   margin-left: 0;
-  padding: 5px 7px;
+  padding: 4px 8px;
 }
 .A2-b div span i:last-child {
   margin-right: 0;
@@ -172,7 +183,7 @@
   font-size: 12px;
 }
 
-.A2-b .A3 figure {
+.A3 figure {
   margin: 20px 0;
   display: flex;
   font-size: 15px;
@@ -190,7 +201,9 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.A2-b article p a {
+.A2-b article p a,
+.A2-c p a,
+.A4 p a {
   color: #567b95;
 }
 
@@ -207,23 +220,23 @@
 }
 
 .A2-b article blockquote span {
-  font-size: 13px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+  line-height: 24px;
+  font-size: 14px;
 }
 
-.A2-b article blockquote cite {
-  font-size: 20px;
-  line-height: 24px;
+.A2-b article blockquote span cite {
   font-family: "Times New Roman", Times, serif;
   font-size: 18px;
   color: #333;
 }
 
 .A2-b article blockquote button {
-  width: 125px;
-  height: 40px;
-  padding-top: 4px;
+  margin-top: 6px;
+  width: 116px;
+  height: 30px;
+  padding-top: 3px;
   background-color: transparent;
   font-size: 15px;
   font-weight: bold;
@@ -238,6 +251,42 @@
   transition: 500ms;
 }
 
+.A2-b .Subs-art {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.A2-b article article div {
+  width: 80px;
+  color: #567b95;
+}
+
+.A2-b article article div:first-child {
+  border-bottom: 1px solid rgb(202, 202, 202);
+  margin-bottom: 27px;
+}
+
+.A2-b article article div:last-child {
+  border-top: 1px solid rgb(202, 202, 202);
+  margin-top: 13px;
+}
+
+.A2-b article article p {
+  margin-top: 0;
+  font-size: 14.5px;
+  font-weight: bold;
+  line-height: 8px;
+}
+
+.A2-b article article a {
+  font-size: 14.5px;
+  font-weight: bold;
+  color: #567b95;
+  text-decoration: none;
+}
+
 .A3 figure figcaption {
   padding-left: 10px;
   line-height: 15px;
@@ -250,4 +299,128 @@
 
 .A3 h3 {
   border-bottom: 1px solid grey;
+  font-size: 12.5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.A3 article figure {
+  cursor: pointer;
+}
+
+.A3 article figure figcaption:hover {
+  text-decoration: underline;
+}
+
+.A2-c p,
+.A4 p {
+  margin-top: 20px;
+}
+
+.A2-c figure {
+  margin: 40px 0;
+}
+
+.A2-c article,
+.A4 p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.A2-c article p,
+.A4 p {
+  line-height: 20px;
+}
+
+.A4 article h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.A4 article {
+  margin-top: 15px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.A4 article figure {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.A4 article figure img {
+  width: 165px;
+}
+
+.A4 article figcaption {
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.A4 article figcaption span:last-child {
+  margin-left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #888;
+}
+
+.A4 article figcaption:hover > .A4-art {
+  opacity: 0.8;
+}
+
+.A4 form {
+  margin: 25px 0 50px 0;
+}
+
+.A4 form button {
+  width: 328px;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background-color: #567b95;
+  border-style: none;
+  border-radius: 3px;
+  transition: 700ms;
+}
+
+.A4 form button:hover {
+  background-color: #326891;
+  transition: 700ms;
+}
+
+.A5 {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(10, auto);
+  gap: 10px;
+}
+
+.itemsF {
+  background-color: red;
+  font-size: 50px;
+}
+
+.F-title,
+.M-title,
+.F-title {
+  grid-column: 1 / span 3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.F2 {
+  grid-column: 4;
+  grid-row: 1 / -1;
+}
+
+.A5 > * {
+  font-size: 18px;
+}
+.A5 .F-title p {
+  text-align: center;
 }
