@@ -401,7 +401,7 @@
 .A5 {
   display: grid;
   grid-template-columns: 275px 275px 275px 350px;
-  grid-template-rows: 30px auto repeat(8, auto);
+  grid-template-rows: 40px repeat(9, auto);
   gap: 10px;
 }
 
@@ -410,7 +410,7 @@
   font-size: 50px;
 }
 
-.F-title,
+.First-title,
 .M-title,
 .F-title {
   grid-column: 1 / span 3;
@@ -427,11 +427,23 @@
   font-size: 18px;
 }
 
+.A5 .line2 {
+  margin-bottom: 25px;
+}
+
 .A5 .line2 button {
   padding: 15px;
   background-color: white;
   border: 1px solid #e2e2e2;
-  height: 100%;
+}
+
+.line2 button {
+  transition: 550ms;
+}
+
+.line2 button:hover {
+  box-shadow: 1px 2px 9px 2px rgba(226, 226, 226, 1);
+  transition: 600ms;
 }
 
 .A5 .line2 button figure {
@@ -447,7 +459,7 @@
   padding: 10px;
 }
 
-.line2 button figure i:hover {
+.line2:hover .fa-plus {
   color: white;
   background-color: black;
 }
@@ -458,11 +470,6 @@
 
 .line2 button article {
   text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  position: relative;
 }
 
 .line2 button article p:first-child {
@@ -482,14 +489,75 @@
   margin-bottom: 10px;
 }
 
+.line2 button article div {
+  min-height: 140px;
+}
+
 .line2 button article a {
   text-decoration: none;
   color: #326891;
   font-weight: bold;
-  position: absolute;
-  bottom: 0px;
+  display: flex;
+  align-self: flex-end;
 }
 
 .line2 button a:hover {
   text-decoration: underline;
+}
+
+.First-title,
+.F2 {
+  border-top: 1px solid black;
+  padding: 15px 0;
+}
+
+.First-title p,
+.F2 h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.First-title span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #6e6e6e;
+  cursor: pointer;
+}
+
+.F2 {
+  margin-left: 20px;
+}
+
+.F2 h3 {
+  margin-bottom: 15px;
+}
+
+.F2 p {
+  padding: 15px 0;
+  border-top: 1px solid #e2e2e2;
+  font-size: 21px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.F2 p:hover {
+  opacity: 0.75;
+}
+
+.M-title {
+  padding-top: 21px;
+  border-top: 1px solid black;
+  margin-bottom: 8px;
+}
+
+.M-title p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.M-title p:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
