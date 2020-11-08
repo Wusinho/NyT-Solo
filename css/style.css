@@ -14,13 +14,14 @@
   margin-top: 80px;
   display: grid;
   grid-template-columns: 1fr 620px 1fr;
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: repeat(6, auto);
   grid-template-areas:
     ". A2 ."
     ". A2-b A3"
     ". A2-c ."
     ". A4 ."
-    "A5 A5 A5";
+    "A5 A5 A5"
+    "Information Information Information";
   gap: 10px;
 }
 
@@ -560,4 +561,36 @@
 .M-title p:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.F-img figcaption {
+  text-align: right;
+  font-size: 12px;
+  color: grey;
+}
+
+.F-cap p {
+  margin-top: 5px;
+  color: grey;
+  font-size: 12px;
+}
+
+.Information {
+  grid-area: Information;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+}
+
+.info-box1 {
+  grid-column: 1 / -1;
+}
+
+.info-box2,
+.info-box3,
+.info-box4,
+.info-box5,
+.info-box6 {
+  grid-row: 2 / -1;
 }
